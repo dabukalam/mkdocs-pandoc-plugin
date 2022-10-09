@@ -85,6 +85,19 @@ project-root
 .
 ```
 
+### `pandoc_extra_args`
+
+Here you can add a string to pass directly to the pandoc command line, for example:
+
+```yaml
+plugins:
+  - pandoc:
+      pandoc_extra_args: '--resource-path=assets:. --toc'
+```
+
+`--resource-path` is particularly useful when page-relative links in markdown don't map to the relative links from where pandoc is being run.
+
+
 ## Contributing
 
 From reporting a bug to submitting a pull request: every contribution is appreciated and welcome. Report bugs, ask questions and request features using [Github issues][github-issues].
